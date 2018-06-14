@@ -12,6 +12,7 @@
 		180D6D6B20D2BD16003B4D85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180D6D6920D2BD16003B4D85 /* Main.storyboard */; };
 		180D6D6D20D2BD1C003B4D85 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 180D6D6C20D2BD1C003B4D85 /* Assets.xcassets */; };
 		180D6D7020D2BD1C003B4D85 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 180D6D6E20D2BD1C003B4D85 /* LaunchScreen.storyboard */; };
+		9A34C47BA6FAEFA73C54138E /* Pods_SpeedTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AED9E6A954A378DCF501AE0E /* Pods_SpeedTesting.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		180D6D6C20D2BD1C003B4D85 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		180D6D6F20D2BD1C003B4D85 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		180D6D7120D2BD1C003B4D85 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		44CA145FBBCB95293607F62A /* Pods-SpeedTesting.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedTesting.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedTesting/Pods-SpeedTesting.release.xcconfig"; sourceTree = "<group>"; };
+		7C0A3245E7C85DD8A8830F3B /* Pods-SpeedTesting.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpeedTesting.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpeedTesting/Pods-SpeedTesting.debug.xcconfig"; sourceTree = "<group>"; };
+		AED9E6A954A378DCF501AE0E /* Pods_SpeedTesting.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpeedTesting.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A34C47BA6FAEFA73C54138E /* Pods_SpeedTesting.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				180D6D6420D2BD16003B4D85 /* SpeedTesting */,
 				180D6D6320D2BD16003B4D85 /* Products */,
+				6CB9736796A48DF901B65350 /* Pods */,
+				519484FA8509826B23D1B9EC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = SpeedTesting;
 			sourceTree = "<group>";
 		};
+		519484FA8509826B23D1B9EC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AED9E6A954A378DCF501AE0E /* Pods_SpeedTesting.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		6CB9736796A48DF901B65350 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7C0A3245E7C85DD8A8830F3B /* Pods-SpeedTesting.debug.xcconfig */,
+				44CA145FBBCB95293607F62A /* Pods-SpeedTesting.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 180D6D7420D2BD1C003B4D85 /* Build configuration list for PBXNativeTarget "SpeedTesting" */;
 			buildPhases = (
+				99AF0CAD9C1C8F97E16239A1 /* [CP] Check Pods Manifest.lock */,
 				180D6D5E20D2BD16003B4D85 /* Sources */,
 				180D6D5F20D2BD16003B4D85 /* Frameworks */,
 				180D6D6020D2BD16003B4D85 /* Resources */,
+				933A55D52E75601133CB4D01 /* [CP] Embed Pods Frameworks */,
+				A130FF2D67D4FC9A858A0627 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,66 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		933A55D52E75601133CB4D01 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-SpeedTesting/Pods-SpeedTesting-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeedTesting/Pods-SpeedTesting-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99AF0CAD9C1C8F97E16239A1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SpeedTesting-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A130FF2D67D4FC9A858A0627 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SpeedTesting/Pods-SpeedTesting-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		180D6D5E20D2BD16003B4D85 /* Sources */ = {
@@ -278,6 +365,7 @@
 		};
 		180D6D7520D2BD1C003B4D85 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C0A3245E7C85DD8A8830F3B /* Pods-SpeedTesting.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +384,7 @@
 		};
 		180D6D7620D2BD1C003B4D85 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44CA145FBBCB95293607F62A /* Pods-SpeedTesting.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
